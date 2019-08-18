@@ -16,7 +16,6 @@ fn main() {
     println!("Now listening on localhost:8000");
 
     rouille::start_server("localhost:8000", move |request| {
-
         router!(request,
             (GET) (/) => {
                 rouille::Response::text("Endpoints \n\n /save/:name/:value \n /load/:name/")
